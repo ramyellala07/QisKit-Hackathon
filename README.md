@@ -11,14 +11,6 @@ This project benchmarks the seven official CORE algorithms on Platform A and Pla
 
 ## 2. Setup — exact steps
 
-Use Python 3.10–3.13. If PowerShell is open at the repository root (the folder containing `Phase 1` and `Phase 2`), first enter the Phase 2 folder:
-
-```powershell
-Set-Location "Phase 2"
-```
-
-Run the setup commands below from inside `Phase 2`:
-
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
