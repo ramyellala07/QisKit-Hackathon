@@ -1,0 +1,88 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+platform,algorithm,operation,correct,correct_total,warmup,n,median_ms,p25_ms,p75_ms,iqr_ms,p95_ms,min_ms,max_ms,mean_ms,stdev_ms,memory_kb,baseline_rss_mb,sizes_json
+A,ML-KEM-768,keygen,100,100,10,100,0.23115,0.2264,0.2434,0.017,0.3412,0.2181,0.4554,0.24697,0.04065,12.0,28.5,"{""public_key"": 1184, ""secret_key"": 64, ""ciphertext"": 1088, ""shared_secret"": 32, ""encoding"": ""raw""}"
+A,ML-KEM-768,encapsulate,100,100,10,1000,0.0605,0.0566,0.0624,0.0058,0.07631,0.053,0.1047,0.06137,0.00719,0.0,28.6,"{""public_key"": 1184, ""secret_key"": 64, ""ciphertext"": 1088, ""shared_secret"": 32, ""encoding"": ""raw""}"
+A,ML-KEM-768,decapsulate,100,100,10,100,0.0917,0.0911,0.09305,0.00195,0.09891,0.0906,0.1095,0.09267,0.00305,20.0,28.6,"{""public_key"": 1184, ""secret_key"": 64, ""ciphertext"": 1088, ""shared_secret"": 32, ""encoding"": ""raw""}"
+A,RSA-2048-OAEP,keygen,100,100,10,100,49.6138,32.72747,76.44853,43.72105,123.50032,11.5568,192.2409,58.38769,36.48715,32.0,30.0,"{""public_key"": 294, ""secret_key"": 1217, ""ciphertext"": 256, ""shared_secret"": 32, ""encoding"": ""DER SPKI / DER PKCS#8""}"
+A,RSA-2048-OAEP,encapsulate,100,100,10,1000,0.032,0.0311,0.0339,0.0028,0.0504,0.0301,0.1043,0.03496,0.00726,0.0,30.0,"{""public_key"": 294, ""secret_key"": 1217, ""ciphertext"": 256, ""shared_secret"": 32, ""encoding"": ""DER SPKI / DER PKCS#8""}"
+A,RSA-2048-OAEP,decapsulate,100,100,10,100,0.75565,0.6411,0.93102,0.28992,1.25084,0.5879,1.6779,0.82152,0.22938,16.0,30.0,"{""public_key"": 294, ""secret_key"": 1217, ""ciphertext"": 256, ""shared_secret"": 32, ""encoding"": ""DER SPKI / DER PKCS#8""}"
+A,ECDH-P256,keygen,100,100,10,1000,0.0242,0.0229,0.0276,0.0047,0.041,0.0219,0.0945,0.02706,0.00751,4.0,30.0,"{""public_key"": 91, ""secret_key"": 138, ""ciphertext"": 91, ""shared_secret"": 32, ""encoding"": ""DER SPKI / DER PKCS#8; ciphertext is ephemeral public key""}"
+A,ECDH-P256,encapsulate,100,100,10,1000,0.0909,0.0887,0.0933,0.0046,0.11585,0.085,0.1763,0.09401,0.01191,0.0,30.1,"{""public_key"": 91, ""secret_key"": 138, ""ciphertext"": 91, ""shared_secret"": 32, ""encoding"": ""DER SPKI / DER PKCS#8; ciphertext is ephemeral public key""}"
+A,ECDH-P256,decapsulate,100,100,10,1000,0.0562,0.0544,0.0655,0.0111,0.0908,0.0533,0.1703,0.06261,0.01328,0.0,30.1,"{""public_key"": 91, ""secret_key"": 138, ""ciphertext"": 91, ""shared_secret"": 32, ""encoding"": ""DER SPKI / DER PKCS#8; ciphertext is ephemeral public key""}"
+A,ML-DSA-65,keygen,100,100,10,100,0.27455,0.26567,0.2801,0.01443,0.30885,0.2573,1.0929,0.28401,0.08335,16.0,28.6,"{""public_key"": 1952, ""secret_key"": 32, ""signature"": 3309, ""encoding"": ""raw; secret key is compact seed form""}"
+A,ML-DSA-65,sign,100,100,10,100,1.0203,0.68193,1.68235,1.00042,2.98073,0.4902,8.6901,1.38831,1.16059,92.0,28.6,"{""public_key"": 1952, ""secret_key"": 32, ""signature"": 3309, ""encoding"": ""raw; secret key is compact seed form""}"
+A,ML-DSA-65,verify,100,100,10,1000,0.2753,0.2677,0.32553,0.05783,0.48665,0.2572,1.44,0.32074,0.09845,76.0,28.6,"{""public_key"": 1952, ""secret_key"": 32, ""signature"": 3309, ""encoding"": ""raw; secret key is compact seed form""}"
+A,SLH-DSA-SHA2-128s,keygen,10,10,10,30,225.2755,217.22135,231.09887,13.87753,249.13129,201.2202,259.2955,226.26506,12.91557,0.0,24.2,"{""public_key"": 32, ""secret_key"": 64, ""signature"": 7856, ""encoding"": ""raw; pqcrypto expanded secret key""}"
+A,SLH-DSA-SHA2-128s,sign,10,10,10,30,1857.16535,1826.5032,1920.23432,93.73113,2021.22081,1719.4095,2073.6095,1875.23012,76.34445,44.0,24.3,"{""public_key"": 32, ""secret_key"": 64, ""signature"": 7856, ""encoding"": ""raw; pqcrypto expanded secret key""}"
+A,SLH-DSA-SHA2-128s,verify,10,10,10,100,1.6918,1.56925,1.8272,0.25795,2.26753,1.4709,2.4372,1.73717,0.22262,4.0,24.2,"{""public_key"": 32, ""secret_key"": 64, ""signature"": 7856, ""encoding"": ""raw; pqcrypto expanded secret key""}"
+A,RSA-2048-PSS,keygen,100,100,10,100,55.96405,39.17932,82.7562,43.57688,127.35556,16.0053,201.3102,64.5327,36.2373,76.0,30.0,"{""public_key"": 294, ""secret_key"": 1218, ""signature"": 256, ""encoding"": ""DER SPKI / DER PKCS#8""}"
+A,RSA-2048-PSS,sign,100,100,10,100,1.2323,1.04343,1.43378,0.39035,1.82561,0.6776,3.0078,1.28663,0.35007,4.0,30.2,"{""public_key"": 294, ""secret_key"": 1218, ""signature"": 256, ""encoding"": ""DER SPKI / DER PKCS#8""}"
+A,RSA-2048-PSS,verify,100,100,10,1000,0.0689,0.05217,0.08595,0.03377,0.15443,0.0393,0.6622,0.07877,0.04639,20.0,30.3,"{""public_key"": 294, ""secret_key"": 1218, ""signature"": 256, ""encoding"": ""DER SPKI / DER PKCS#8""}"
+A,ECDSA-P256,keygen,100,100,10,1000,0.04695,0.0415,0.0633,0.0218,0.14261,0.0252,2.7323,0.0646,0.10039,12.0,30.9,"{""public_key"": 91, ""secret_key"": 138, ""signature"": 70, ""encoding"": ""DER SPKI / DER PKCS#8; signature is ASN.1 DER""}"
+A,ECDSA-P256,sign,100,100,10,1000,0.07575,0.06488,0.1109,0.04603,0.23713,0.041,2.5841,0.10801,0.13339,0.0,31.0,"{""public_key"": 91, ""secret_key"": 138, ""signature"": 70, ""encoding"": ""DER SPKI / DER PKCS#8; signature is ASN.1 DER""}"
+A,ECDSA-P256,verify,100,100,10,1000,0.1695,0.1408,0.21085,0.07005,0.39813,0.0891,1.9764,0.20129,0.13976,4.0,30.8,"{""public_key"": 91, ""secret_key"": 138, ""signature"": 70, ""encoding"": ""DER SPKI / DER PKCS#8; signature is ASN.1 DER""}"

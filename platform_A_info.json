@@ -1,0 +1,20 @@
+{
+  "platform_label": "A",
+  "recorded_at": "2026-10-29 16:59:37",
+  "os": "Windows 10",
+  "os_version": "10.0.26300",
+  "machine": "AMD64",
+  "cpu_model": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+  "physical_cores": 6,
+  "logical_cores": 12,
+  "cpu_max_mhz": 2712.0,
+  "ram_total_gb": 15.73,
+  "python": "3.11.9",
+  "python_impl": "CPython",
+  "on_battery": false,
+  "versions": {
+    "cryptography": "50.0.2",
+    "pqcrypto": "1.0.0",
+    "psutil": "7.2.2"
+  }
+}

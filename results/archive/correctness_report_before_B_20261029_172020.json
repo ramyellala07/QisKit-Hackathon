@@ -1,0 +1,86 @@
+[
+  {
+    "platform": "A",
+    "algorithm": "ML-KEM-768",
+    "correctness_trials": "100",
+    "passed_trials": "100",
+    "overall_status": "PASS",
+    "roundtrip_or_valid_signature": "PASS",
+    "tampered_ciphertext": "PASS",
+    "tampered_message": "N/A",
+    "tampered_signature": "N/A",
+    "special_case": ""
+  },
+  {
+    "platform": "A",
+    "algorithm": "RSA-2048-OAEP",
+    "correctness_trials": "100",
+    "passed_trials": "100",
+    "overall_status": "PASS",
+    "roundtrip_or_valid_signature": "PASS",
+    "tampered_ciphertext": "PASS",
+    "tampered_message": "N/A",
+    "tampered_signature": "N/A",
+    "special_case": "Modified OAEP ciphertext rejected by decryption error"
+  },
+  {
+    "platform": "A",
+    "algorithm": "ECDH-P256",
+    "correctness_trials": "100",
+    "passed_trials": "100",
+    "overall_status": "PASS",
+    "roundtrip_or_valid_signature": "PASS",
+    "tampered_ciphertext": "PASS",
+    "tampered_message": "N/A",
+    "tampered_signature": "N/A",
+    "special_case": ""
+  },
+  {
+    "platform": "A",
+    "algorithm": "ML-DSA-65",
+    "correctness_trials": "100",
+    "passed_trials": "100",
+    "overall_status": "PASS",
+    "roundtrip_or_valid_signature": "PASS",
+    "tampered_ciphertext": "N/A",
+    "tampered_message": "PASS",
+    "tampered_signature": "PASS",
+    "special_case": ""
+  },
+  {
+    "platform": "A",
+    "algorithm": "SLH-DSA-SHA2-128s",
+    "correctness_trials": "10",
+    "passed_trials": "10",
+    "overall_status": "PASS",
+    "roundtrip_or_valid_signature": "PASS",
+    "tampered_ciphertext": "N/A",
+    "tampered_message": "PASS",
+    "tampered_signature": "PASS",
+    "special_case": ""
+  },
+  {
+    "platform": "A",
+    "algorithm": "RSA-2048-PSS",
+    "correctness_trials": "100",
+    "passed_trials": "100",
+    "overall_status": "PASS",
+    "roundtrip_or_valid_signature": "PASS",
+    "tampered_ciphertext": "N/A",
+    "tampered_message": "PASS",
+    "tampered_signature": "PASS",
+    "special_case": ""
+  },
+  {
+    "platform": "A",
+    "algorithm": "ECDSA-P256",
+    "correctness_trials": "100",
+    "passed_trials": "100",
+    "overall_status": "PASS",
+    "roundtrip_or_valid_signature": "PASS",
+    "tampered_ciphertext": "N/A",
+    "tampered_message": "PASS",
+    "tampered_signature": "PASS",
+    "special_case": ""
+  }
+]

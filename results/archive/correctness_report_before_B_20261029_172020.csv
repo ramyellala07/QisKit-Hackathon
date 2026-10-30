@@ -1,0 +1,8 @@
+platform,algorithm,correctness_trials,passed_trials,overall_status,roundtrip_or_valid_signature,tampered_ciphertext,tampered_message,tampered_signature,special_case
+A,ML-KEM-768,100,100,PASS,PASS,PASS,N/A,N/A,
+A,RSA-2048-OAEP,100,100,PASS,PASS,PASS,N/A,N/A,Modified OAEP ciphertext rejected by decryption error
+A,ECDH-P256,100,100,PASS,PASS,PASS,N/A,N/A,
+A,ML-DSA-65,100,100,PASS,PASS,N/A,PASS,PASS,
+A,SLH-DSA-SHA2-128s,10,10,PASS,PASS,N/A,PASS,PASS,
+A,RSA-2048-PSS,100,100,PASS,PASS,N/A,PASS,PASS,
+A,ECDSA-P256,100,100,PASS,PASS,N/A,PASS,PASS,

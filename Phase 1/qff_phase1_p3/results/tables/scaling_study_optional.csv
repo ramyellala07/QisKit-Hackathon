@@ -1,0 +1,28 @@
+map,circuit,n_bits,logical_qubits,depth,two_qubit_gates,swap_count,all_to_all_2q_gates
+line_12,CDKM ripple-carry adder,1,3,46,21,3,16
+line_12,CDKM ripple-carry adder,2,5,92,45,7,32
+line_12,CDKM ripple-carry adder,3,7,139,69,11,48
+line_12,CDKM ripple-carry adder,4,9,186,93,15,64
+line_12,CDKM ripple-carry adder,5,11,233,117,19,80
+line_12,Draper QFT adder,1,2,3,1,0,1
+line_12,Draper QFT adder,2,4,29,12,1,8
+line_12,Draper QFT adder,3,6,65,38,6,21
+line_12,Draper QFT adder,4,8,108,79,19,40
+line_12,Draper QFT adder,5,10,162,148,37,65
+line_12,QFT multiplier,1,4,53,22,4,16
+line_12,QFT multiplier,2,8,361,221,54,115
+line_12,QFT multiplier,3,12,966,813,207,340
+heavyhex_19,CDKM ripple-carry adder,1,3,46,21,3,16
+heavyhex_19,CDKM ripple-carry adder,2,5,92,45,7,32
+heavyhex_19,CDKM ripple-carry adder,3,7,136,66,10,48
+heavyhex_19,CDKM ripple-carry adder,4,9,176,89,14,64
+heavyhex_19,CDKM ripple-carry adder,5,11,236,120,21,80
+heavyhex_19,Draper QFT adder,1,2,3,1,0,1
+heavyhex_19,Draper QFT adder,2,4,34,11,1,8
+heavyhex_19,Draper QFT adder,3,6,65,33,5,21
+heavyhex_19,Draper QFT adder,4,8,103,68,13,40
+heavyhex_19,Draper QFT adder,5,10,153,118,27,65
+heavyhex_19,QFT multiplier,1,4,53,23,3,16
+heavyhex_19,QFT multiplier,2,8,322,213,46,115
+heavyhex_19,QFT multiplier,3,12,989,700,168,340
+heavyhex_19,QFT multiplier,4,16,2143,1567,372,719

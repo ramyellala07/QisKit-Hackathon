@@ -1,0 +1,13 @@
+processor,circuit,n_bits,n_seeds,2q_mean,2q_std,2q_min,depth_mean,depth_min
+A_bowtie_5q,CDKM ripple-carry adder,1,10,16.0,0.0,16,29.0,29
+A_bowtie_5q,CDKM ripple-carry adder,2,10,32.0,0.0,32,58.0,58
+A_bowtie_5q,Draper QFT adder,1,10,1.0,0.0,1,3.0,3
+A_bowtie_5q,Draper QFT adder,2,10,8.0,0.0,8,29.0,29
+A_bowtie_5q,QFT multiplier,1,10,19.0,0.0,19,36.0,36
+B_heavyhex_7q,CDKM ripple-carry adder,1,10,21.0,0.0,21,46.0,46
+B_heavyhex_7q,CDKM ripple-carry adder,2,10,42.6,0.92,42,88.8,86
+B_heavyhex_7q,CDKM ripple-carry adder,3,10,64.2,0.98,63,130.6,129
+B_heavyhex_7q,Draper QFT adder,1,10,1.0,0.0,1,3.0,3
+B_heavyhex_7q,Draper QFT adder,2,10,11.0,0.0,11,34.0,34
+B_heavyhex_7q,Draper QFT adder,3,10,33.6,1.56,31,64.7,63
+B_heavyhex_7q,QFT multiplier,1,10,23.0,0.0,23,53.0,53

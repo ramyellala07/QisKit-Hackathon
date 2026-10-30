@@ -1,0 +1,2 @@
+platform,algorithm,operation,correct,correct_total,warmup,n,median_ms,p25_ms,p75_ms,iqr_ms,p95_ms,min_ms,max_ms,mean_ms,stdev_ms,memory_kb,baseline_rss_mb,sizes_json
+A,ML-KEM-768,keygen,100,100,10,100,,,,,,,,,,,,"{""public_key"": 1184, ""secret_key"": 64, ""ciphertext"": 1088, ""shared_secret"": 32, ""encoding"": ""raw""}"

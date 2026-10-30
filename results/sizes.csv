@@ -1,0 +1,8 @@
+algorithm,public_key_bytes,secret_key_reported_bytes,secret_key_expanded_bytes,ciphertext_bytes,shared_secret_bytes,signature_bytes,encoding
+ML-KEM-768,1184,64,2400.0,1088.0,32.0,,raw
+RSA-2048-OAEP,294,1217,,256.0,32.0,,DER SPKI / DER PKCS#8
+ECDH-P256,91,138,,91.0,32.0,,DER SPKI / DER PKCS#8; ciphertext is ephemeral public key
+ML-DSA-65,1952,32,4032.0,,,3309.0,raw; secret key is compact seed form
+SLH-DSA-SHA2-128s,32,64,,,,7856.0,raw; pqcrypto expanded secret key
+RSA-2048-PSS,294,1217,,,,256.0,DER SPKI / DER PKCS#8
+ECDSA-P256,91,138,,,,71.0,DER SPKI / DER PKCS#8; signature is ASN.1 DER

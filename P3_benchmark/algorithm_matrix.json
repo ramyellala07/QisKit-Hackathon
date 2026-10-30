@@ -1,0 +1,172 @@
+{
+  "_title": "QFF 2026 Phase 2 - PS-P3 official algorithm and parameter-set matrix",
+  "_rules": [
+    "All CORE entries are mandatory on Platform A and Platform B.",
+    "EXTENDED entries are optional; include them only if they help your recommendations.",
+    "Use exactly these parameter sets and libraries for the CORE comparison. Other libraries may be added as clearly labelled extra experiments.",
+    "Signed message: the fixed 1,024-byte message = SHAKE-256(b'QFF2026-P3-message') truncated to 1,024 bytes.",
+    "KEM-style operations for RSA-2048: encapsulate = RSA-OAEP(SHA-256) encryption of a fresh 32-byte random secret; decapsulate = decryption.",
+    "KEM-style operations for ECDH P-256: keygen = ephemeral key pair; encapsulate = generate ephemeral key + derive shared secret with peer public key; decapsulate = derive shared secret with the ephemeral public key."
+  ],
+  "trials": {
+    "warmup": 10,
+    "minimum_trials_default": 100,
+    "minimum_trials_exceptions": {
+      "SLH-DSA-SHA2-128s keygen": 30,
+      "SLH-DSA-SHA2-128s sign": 30,
+      "RSA-2048 keygen": 30
+    },
+    "note": "Exceptions exist because one call takes about 0.2-3 s. More trials are always allowed."
+  },
+  "core": {
+    "kem": [
+      {
+        "name": "ML-KEM-768",
+        "standard": "FIPS 203",
+        "nist_level": 3,
+        "library": "cryptography",
+        "api": "mlkem.MLKEM768PrivateKey",
+        "operations": [
+          "keygen",
+          "encapsulate",
+          "decapsulate"
+        ]
+      },
+      {
+        "name": "RSA-2048-OAEP",
+        "standard": "PKCS#1 v2.2 (classical reference)",
+        "nist_level": null,
+        "library": "cryptography",
+        "api": "rsa.generate_private_key(65537, 2048) + padding.OAEP(SHA-256)",
+        "operations": [
+          "keygen",
+          "encapsulate",
+          "decapsulate"
+        ]
+      },
+      {
+        "name": "ECDH-P256",
+        "standard": "SP 800-56A (classical reference)",
+        "nist_level": null,
+        "library": "cryptography",
+        "api": "ec.generate_private_key(ec.SECP256R1()) + exchange(ec.ECDH())",
+        "operations": [
+          "keygen",
+          "encapsulate",
+          "decapsulate"
+        ]
+      }
+    ],
+    "signature": [
+      {
+        "name": "ML-DSA-65",
+        "standard": "FIPS 204",
+        "nist_level": 3,
+        "library": "cryptography",
+        "api": "mldsa.MLDSA65PrivateKey",
+        "operations": [
+          "keygen",
+          "sign",
+          "verify"
+        ]
+      },
+      {
+        "name": "SLH-DSA-SHA2-128s",
+        "standard": "FIPS 205",
+        "nist_level": 1,
+        "library": "pqcrypto",
+        "api": "pqcrypto.sign.slh_dsa_sha2_128s",
+        "operations": [
+          "keygen",
+          "sign",
+          "verify"
+        ]
+      },
+      {
+        "name": "RSA-2048-PSS",
+        "standard": "PKCS#1 v2.2 (classical reference)",
+        "nist_level": null,
+        "library": "cryptography",
+        "api": "padding.PSS(MGF1(SHA-256), salt_length=32), SHA-256",
+        "operations": [
+          "keygen",
+          "sign",
+          "verify"
+        ]
+      },
+      {
+        "name": "ECDSA-P256",
+        "standard": "FIPS 186-5 (classical reference)",
+        "nist_level": null,
+        "library": "cryptography",
+        "api": "ec.ECDSA(hashes.SHA256())",
+        "operations": [
+          "keygen",
+          "sign",
+          "verify"
+        ]
+      }
+    ]
+  },
+  "extended_optional": {
+    "kem": [
+      {
+        "name": "ML-KEM-512",
+        "library": "pqcrypto",
+        "api": "pqcrypto.kem.ml_kem_512"
+      },
+      {
+        "name": "ML-KEM-1024",
+        "library": "cryptography",
+        "api": "mlkem.MLKEM1024PrivateKey"
+      },
+      {
+        "name": "X25519",
+        "library": "cryptography",
+        "api": "x25519.X25519PrivateKey"
+      }
+    ],
+    "signature": [
+      {
+        "name": "ML-DSA-44",
+        "library": "cryptography",
+        "api": "mldsa.MLDSA44PrivateKey"
+      },
+      {
+        "name": "ML-DSA-87",
+        "library": "cryptography",
+        "api": "mldsa.MLDSA87PrivateKey"
+      },
+      {
+        "name": "SLH-DSA-SHA2-128f",
+        "library": "pqcrypto",
+        "api": "pqcrypto.sign.slh_dsa_sha2_128f"
+      },
+      {
+        "name": "Ed25519",
+        "library": "cryptography",
+        "api": "ed25519.Ed25519PrivateKey"
+      },
+      {
+        "name": "RSA-3072-PSS",
+        "library": "cryptography",
+        "api": "rsa.generate_private_key(65537, 3072)"
+      }
+    ]
+  },
+  "artifact_sizes_to_report_bytes": {
+    "kem": [
+      "public_key",
+      "secret_key",
+      "ciphertext",
+      "shared_secret"
+    ],
+    "signature": [
+      "public_key",
+      "secret_key",
+      "signature"
+    ],
+    "serialisation": "raw bytes (public_bytes_raw / private_bytes_raw) for ML-KEM, ML-DSA, X25519, Ed25519 and pqcrypto outputs; DER SubjectPublicKeyInfo / PKCS#8 for RSA and ECDSA/ECDH. Say which encoding you used.",
+    "secret_key_note": "pyca/cryptography private_bytes_raw() returns the compact SEED form (ML-KEM: 64 B, ML-DSA: 32 B). The FIPS expanded secret keys are larger (ML-KEM-768 decapsulation key 2400 B, ML-DSA-65 4032 B; pqcrypto returns the expanded form). Report which form you measured; storage-constrained recommendations should discuss both."
+  }
+}
